@@ -1,0 +1,40 @@
+[package]
+name = "rs-gherkin-feature2json"
+version = "0.1.0"
+edition = "2024"
+
+exclude = [
+]
+
+[profile.release-wasi]
+inherits = "release"
+lto = true
+strip = true
+opt-level = 's'
+codegen-units = 1
+
+[[bin]]
+name = "gherkin2json"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+unwrap_used = "forbid"
+expect_used = "forbid"
+panic = "forbid"
+
+[dependencies.gherkin]
+version = "0.16.0"
+default-features = false
+features = [
+  "parser",
+  "serde",
+]
+
+[dependencies.serde_json]
+version = "1.0.151"
+default-features = false
+features = [
+  "std",
+]
