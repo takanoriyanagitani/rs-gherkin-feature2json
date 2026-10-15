@@ -3,7 +3,15 @@ name = "rs-gherkin-feature2json"
 version = "0.1.0"
 edition = "2024"
 
+description = "Convert Gherkin feature file to JSON"
+license = "Apache-2.0"
+repository = "https://github.com/takanoriyanagitani/rs-gherkin-feature2json"
+homepage = "https://github.com/takanoriyanagitani/rs-gherkin-feature2json"
+documentation = "https://docs.rs/rs-gherkin-feature2json/latest"
+keywords = ["gherkin", "json", "wasi", "convert"]
+
 exclude = [
+  "gherkin2json.wasm",
 ]
 
 [profile.release-wasi]
